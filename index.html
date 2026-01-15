@@ -3,125 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wanderlust Adventure | Complete Travel Packages</title>
+<title>Wanderlust Adventure | Travel Packages</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif}
-header{background:#0a5c5a;color:#fff;padding:15px;text-align:center}
-nav a{color:#fff;margin:0 8px;text-decoration:none;font-weight:bold}
-.section{padding:40px 20px;max-width:1200px;margin:auto}
-.hero{background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');background-size:cover;background-position:center;color:#fff;padding:90px 20px;text-align:center}
-.packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{border:1px solid #ddd;border-radius:10px;padding:20px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
-.price{color:#0a5c5a;font-weight:bold}
-.btn{background:#0a5c5a;color:#fff;padding:10px 15px;border-radius:5px;text-decoration:none;display:inline-block}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-.gallery img{width:100%;border-radius:10px}
-footer{background:#222;color:#fff;text-align:center;padding:20px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:12px 16px;border-radius:50px;text-decoration:none}
+body{margin:0;font-family:'Poppins',sans-serif;background:#f8fcff;color:#333}
+header{background:#fff;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+header h1{color:#1fa2ff}
+nav a{margin:0 15px;text-decoration:none;color:#333;font-weight:500}
+.hero{height:85vh;background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+.hero h2{font-size:48px}
+section{padding:60px 40px}
+.packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card .content{padding:20px}
+footer{background:#0a3d62;color:#fff;padding:30px;text-align:center}
 </style>
 </head>
 <body>
-
 <header>
 <h1>Wanderlust Adventure</h1>
-<p>Explore • Travel • Experience</p>
 <nav>
-<a href="#leh">Leh</a>
-<a href="#spiti">Spiti</a>
-<a href="#rajasthan">Rajasthan</a>
-<a href="#goa">Goa</a>
-<a href="#northeast">North East</a>
-<a href="#andaman">Andaman</a>
-<a href="#kerala">Kerala</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
+<a href="#">Home</a>
+<a href="#">Packages</a>
+<a href="#">Contact</a>
 </nav>
 </header>
 
-<section class="hero">
-<h2>Complete India Tour Packages</h2>
-<p>Minimum to Maximum Days • Best Prices • Custom Itinerary</p>
-</section>
-
-<section id="leh" class="section">
-<h2>Leh Ladakh Packages</h2>
-<div class="packages">
-<div class="card"><h3>Leh 5D/4N</h3><p class="price">₹19,999</p><p>Leh Local • Nubra • Pangong</p></div>
-<div class="card"><h3>Leh 7D/6N</h3><p class="price">₹27,999</p><p>Leh • Nubra • Pangong • Khardungla</p></div>
+<div class="hero">
+<div>
+<h2>Explore India With Us</h2>
+<p>Himachal • Leh • Kashmir • Goa • Kerala • Andaman</p>
 </div>
-<p><b>Sample Itinerary:</b> Day 1 Arrival Leh | Day 2 Local | Day 3 Nubra | Day 4 Pangong | Day 5 Departure</p>
-</section>
-
-<section id="spiti" class="section">
-<h2>Spiti Valley Packages</h2>
-<div class="packages">
-<div class="card"><h3>Spiti 6D/5N</h3><p class="price">₹22,999</p><p>Key • Kaza • Chandratal</p></div>
-<div class="card"><h3>Spiti 8D/7N</h3><p class="price">₹29,999</p><p>Complete Circuit</p></div>
 </div>
-</section>
 
-<section id="rajasthan" class="section">
-<h2>Rajasthan Packages</h2>
+<section>
+<h2 style="text-align:center;color:#1fa2ff">Popular Packages</h2>
 <div class="packages">
-<div class="card"><h3>Jaipur 3D/2N</h3><p class="price">₹7,999</p></div>
-<div class="card"><h3>Jaipur–Jodhpur–Udaipur 6D/5N</h3><p class="price">₹18,999</p></div>
-</div>
-</section>
-
-<section id="goa" class="section">
-<h2>Goa Packages</h2>
-<div class="packages">
-<div class="card"><h3>Goa 3D/2N</h3><p class="price">₹8,999</p></div>
-<div class="card"><h3>Goa 5D/4N</h3><p class="price">₹13,999</p></div>
-</div>
-</section>
-
-<section id="northeast" class="section">
-<h2>North East Packages</h2>
-<div class="packages">
-<div class="card"><h3>Shillong 4D/3N</h3><p class="price">₹12,999</p></div>
-<div class="card"><h3>Assam–Meghalaya 7D/6N</h3><p class="price">₹22,999</p></div>
-</div>
-</section>
-
-<section id="andaman" class="section">
-<h2>Andaman Packages</h2>
-<div class="packages">
-<div class="card"><h3>Andaman 4D/3N</h3><p class="price">₹19,999</p></div>
-<div class="card"><h3>Andaman 6D/5N</h3><p class="price">₹27,999</p></div>
-</div>
-</section>
-
-<section id="kerala" class="section">
-<h2>Kerala Packages</h2>
-<div class="packages">
-<div class="card"><h3>Kerala 4D/3N</h3><p class="price">₹14,999</p></div>
-<div class="card"><h3>Kerala 7D/6N</h3><p class="price">₹24,999</p></div>
-</div>
-</section>
-
-<section id="gallery" class="section">
-<h2>Travel Gallery</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-<img src="https://images.unsplash.com/photo-1518684079-48b1c87c4a1a">
+<div class="card">
 <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da">
+<div class="content">
+<h3>Shimla Manali</h3>
+<p>4 Nights / 5 Days</p>
+<strong>₹11,500 / PP</strong>
 </div>
-</section>
-
-<section id="contact" class="section">
-<h2>Contact Us</h2>
-<p><b>Wanderlust Adventure</b></p>
-<p>📞 8091418657 | 8627970695</p>
-<p>✉ book.wanderlustadventure@gmail.com</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548013146-72479768bada">
+<div class="content">
+<h3>Leh Ladakh</h3>
+<p>6 Nights / 7 Days</p>
+<strong>₹26,999 / PP</strong>
+</div>
+</div>
+</div>
 </section>
 
 <footer>
 <p>© 2026 Wanderlust Adventure</p>
+<p>📞 8091418657 | 8627970695</p>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/918091418657" target="_blank">WhatsApp</a>
-
 </body>
 </html>
