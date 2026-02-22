@@ -1,67 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
+<html la<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wanderlust Adventure | Travel Packages</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#f8fcff;color:#333}
-header{background:#fff;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-header h1{color:#1fa2ff}
-nav a{margin:0 15px;text-decoration:none;color:#333;font-weight:500}
-.hero{height:85vh;background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
-.hero h2{font-size:48px}
-section{padding:60px 40px}
-.packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.1)}
-.card img{width:100%;height:200px;object-fit:cover}
-.card .content{padding:20px}
-footer{background:#0a3d62;color:#fff;padding:30px;text-align:center}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Adventure | Travel Himachal & India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0d9488', // Teal 600
+                        secondary: '#f59e0b', // Amber 500
+                        dark: '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for aesthetic purposes */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #0d9488; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0f766e; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1593181629936-11c602b70020?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-mountain-sun text-3xl text-primary"></i>
+                    <div>
+                        <h1 class="text-2xl font-bold text-dark tracking-tight">Wanderlust<span class="text-primary">Adventure</span></h1>
+                        <p class="text-[10px] text-gray-500 font-semibold uppercase tracking-widest -mt-1">Explore The Unseen</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
+                    <a href="#destinations" class="text-gray-700 hover:text-primary font-medium transition">Packages</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition">About Us</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition">Contact</a>
+                    <a href="tel:+918627970695" class="bg-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-teal-700 transition shadow-lg shadow-teal-500/30 flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-sm"></i> Call Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#destinations" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Packages</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">About Us</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative hero-bg h-screen flex items-center justify-center pt-20">
+        <div class="text-center px-4 max-w-4xl mx-auto">
+            <span class="block text-secondary font-bold tracking-widest uppercase mb-4 text-sm md:text-base drop-shadow-md">Welcome to the Himalayas</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 drop-shadow-lg leading-tight">
+                Discover Your Next <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-secondary">Great Adventure</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto drop-shadow">
+                Premium tour packages across Himachal Pradesh and India. Expert guides, comfortable stays, and unforgettable memories.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#destinations" class="bg-primary hover:bg-teal-700 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-lg shadow-teal-500/40">
+                    Explore Packages
+                </a>
+                <a href="#contact" class="bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/50 text-white px-8 py-4 rounded-full font-bold text-lg transition">
+                    Plan My Trip
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#destinations" class="text-white opacity-70 hover:opacity-100 transition">
+                <i class="fa-solid fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Popular Destinations Section -->
+    <section id="destinations" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-bold tracking-wider uppercase text-sm mb-2">Top Choices</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900">Our Signature Packages</h3>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <!-- Packages Grid (Populated via JS) -->
+            <div id="packages-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / About -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1626643590239-4d5051baf0f1?q=80&w=1974&auto=format&fit=crop" alt="Shimla Hills" class="w-full h-auto object-cover hover:scale-105 transition duration-700">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+                        <p class="font-bold text-xl"><i class="fa-solid fa-location-dot text-secondary mr-2"></i> Based in Shimla, HP</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 space-y-6">
+                <h2 class="text-primary font-bold tracking-wider uppercase text-sm">About Wanderlust Adventure</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Your Trusted Local Travel Experts</h3>
+                <p class="text-gray-600 text-lg">
+                    Based in the heart of Shimla at Sanjauli, we possess an intimate knowledge of the Himalayan terrain and the diverse landscapes of India. We don't just sell tours; we craft experiences.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-primary text-xl">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Local Expertise</h4>
+                            <p class="text-sm text-gray-600 mt-1">Deep knowledge of hidden gems.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-primary text-xl">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Best Pricing</h4>
+                            <p class="text-sm text-gray-600 mt-1">Affordable luxury packages.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-primary text-xl">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">24/7 Support</h4>
+                            <p class="text-sm text-gray-600 mt-1">We are always a call away.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-primary text-xl">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Comfortable Travel</h4>
+                            <p class="text-sm text-gray-600 mt-1">Premium transport & stays.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Query Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white relative">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-secondary font-bold tracking-wider uppercase text-sm mb-2">Get in touch</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Let's Plan Your Journey</h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                <!-- Contact Info -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+                        <h4 class="text-2xl font-bold mb-6 text-primary">Contact Information</h4>
+                        
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Office Address</p>
+                                <p class="text-gray-300 mt-1">Daroga Niwas,<br>Near Cemetery Gate,<br>Sanjauli, Shimla - 171006<br>Himachal Pradesh, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Phone Numbers</p>
+                                <a href="tel:+918627970695" class="text-gray-300 hover:text-white mt-1 block transition">+91 86279 70695</a>
+                                <a href="tel:+918091418657" class="text-gray-300 hover:text-white block transition">+91 80914 18657</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Email Us</p>
+                                <a href="mailto:info@wanderlustadventure.in" class="text-gray-300 hover:text-white mt-1 block transition">info@wanderlustadventure.in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Query Form -->
+                <div class="lg:col-span-3">
+                    <div class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl text-gray-800">
+                        <h4 class="text-2xl font-bold mb-6 text-gray-900">Send us a Query</h4>
+                        <form id="query-form" onsubmit="handleQuerySubmit(event)">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="+91 XXXXX XXXXX">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="john@example.com">
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Interested Destination</label>
+                                <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+                                    <option>Select Destination</option>
+                                    <option>Shimla - Kullu - Manali</option>
+                                    <option>Spiti Valley Circuit</option>
+                                    <option>Kinnaur Tribal Tour</option>
+                                    <option>Dharamshala & Dalhousie</option>
+                                    <option>Kerala Backwaters</option>
+                                    <option>Golden Triangle (Delhi-Agra-Jaipur)</option>
+                                    <option>Other / Custom Plan</option>
+                                </select>
+                            </div>
+                            <div class="mb-8">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Message / Requirements</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="Tell us about your travel plans, number of pax, travel dates..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-teal-700 text-white font-bold py-4 rounded-lg transition shadow-lg shadow-teal-500/30 flex justify-center items-center gap-2">
+                                <span>Send Inquiry</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-mountain-sun text-2xl text-primary"></i>
+                    <div>
+                        <h2 class="text-xl font-bold text-white tracking-tight">Wanderlust<span class="text-primary">Adventure</span></h2>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-left text-sm">
+                    <p>&copy; 2024 Wanderlust Adventure. All rights reserved.</p>
+                    <p class="mt-1">Govt. Registered Travel Agency | Shimla, HP</p>
+                </div>
+
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition duration-300">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition duration-300">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition duration-300">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition duration-300">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (Hidden by default) -->
+
+    <!-- 1. Itinerary Modal -->
+    <div id="itinerary-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeMong="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1>Wanderlust Adventure</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#">Packages</a>
-<a href="#">Contact</a>
-</nav>
-</header>
-
-<div class="hero">
-<div>
-<h2>Explore India With Us</h2>
-<p>Himachal • Leh • Kashmir • Goa • Kerala • Andaman</p>
-</div>
-</div>
-
-<section>
-<h2 style="text-align:center;color:#1fa2ff">Popular Packages</h2>
-<div class="packages">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da">
-<div class="content">
-<h3>Shimla Manali</h3>
-<p>4 Nights / 5 Days</p>
-<strong>₹11,500 / PP</strong>
-</div>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1548013146-72479768bada">
-<div class="content">
-<h3>Leh Ladakh</h3>
-<p>6 Nights / 7 Days</p>
-<strong>₹26,999 / PP</strong>
-</div>
-</div>
-</div>
-</section>
-
-<footer>
-<p>© 2026 Wanderlust Adventure</p>
-<p>📞 8091418657 | 8627970695</p>
-</footer>
+    <h1 id="hello-world">Hello, World!</h1>
+    <p>Edit this code and click Run.</p>
+    <script src="script.js"></script>
 </body>
 </html>
